@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <style>
+    html {
+        background: url(http://www.elleman.vn/wp-content/uploads/2017/08/18/hinh-anh-dep-1.jpg);
+        background-size: cover;
+    }
+    table  {
+      margin-left:900px;
+      margin-top: -200px;
+      height: 200px;
+      border: solid 4px rgb(245, 23, 7);
+      background-image: linear-gradient(to right bottom, rgb(246, 20, 65), #f0f558);
+      border-radius: 20px/20px;
+
+    }
+    td {
+      padding: 5px 30px;
+    }
+    input,
+    textarea,
+    select {
+      border: solid 1px #ddd;
+      padding: 5px 10px;
+      width: 100%;
+    }
+    select {
+      width: 180px;
+    }
+    input[type="submit"] {
+      width: auto;
+      background: blue;
+      color: #fff;
+    }
+    img {
+      width: 150px;
+      margin-left: 480px;
+      margin-top: 20px;
+      border-radius: 20px/20px;
+    }
+    #k1 {
+      margin-left: 400px;
+      margin-top: 20px;
+      border: solid 3px rgb(4, 252, 28);
+      background-image: linear-gradient(to right bottom, rgba(13, 239, 20, 0.615), #c22ccf);
+    }
+    #k2{
+        margin-left:25px;
+        margin-top: 5px;
+    }
+    #k3, #k4 {
+      border-radius: 25px/20px;
+    }
+    
+    video {
+      margin-top: 30px;
+      margin-left:900px;
+      border-radius:20px/20px;
+      background-image: linear-gradient(to right bottom, rgb(246, 20, 65), #f0f558);
+      
+      border: solid 4px rgb(245, 23, 7);
+     
+    }
+    #myImage {
+      margin-top: -400px;
+      margin-left:1px;
+    }
+    alert {
+    margin:0;
+    font:bold 0.9em verdana,arial;
+    background-color:#3073BB;
+    color:#FFF;
+    border-bottom:1px solid #000;
+    padding:2px 0 2px 5px;
+}
+    /* .alert {
+      background-image: linear-gradient(to right bottom, rgb(246, 20, 65), #f0f558);
+      
+      border: solid 4px rgb(245, 23, 7);
+    } */
+  </style>
+  <body>
+   <script>
+//       var do_alert = setTimeout(function(){
+//     alert("Chào mừng bạn đã đên đây hãy đăng nhập và thưởng thức bài nhạc nhé")
+// }, 3000);
+// function clearAlert()
+//           {
+//             clearTimeout(do_alert);
+//           }
+//    </script>
+<!-- //  <input type="button" onclick="clearAlert()" value="Clear" /> -->
+    <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" />
+   
+    <form method="post" action="https://www.facebook.com">
+    <table id="k1">
+        <tr  >
+            <th colspan="2" style="text-align: center;">
+                Đăng nhập
+            </th>
+          
+        </tr>
+      <tr>
+        <th>Tài khoản</th>
+        <td>
+          <input placeholder="Email hoặc số điện thoại" value="" name="name" />
+        </td>
+      </tr>
+      <tr>
+        <th>Mật khẩu</th>
+        <td>
+          <input placeholder="Mật khẩu" type="password" id="#ipnPassword" value="" name="password" />
+        </td>
+      </tr>
+    
+      <tr>
+        <td>
+          <input type="reset" value="Reset" name="reset" id="k4"  style="background-image: linear-gradient(to right bottom, rgb(0, 21, 255), #f0f558);"  />
+
+        </td>
+        <td>
+          <input id="k3" style="background-image: linear-gradient(to right bottom, rgb(0, 21, 255), #f0f558);" type="submit" value="Đăng nhập" />
+      
+     
+
+        </td>
+      </tr>
+    </table>
+      <table>
+        <tr >
+            <th  colspan="2" style="text-align:center;">
+                <img id="k2" src="./Screenshot 2022-06-19 212430.png">
+            </th>
+        </tr>
+        <tr>
+          <td>Tên của bạn</td>
+          <td>
+            <input placeholder="Tên của bạn" type="text" value="" name="name" />
+          </td>
+        </tr>
+        <tr>
+          <td>Mật khẩu
+            
+          </td>
+        
+              
+            </td>
+            <td>
+              <input placeholder="Mật khẩu" type="password" id="#ipnPassword" value="" name="password" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              
+            </td>
+            <td>
+              <input placeholder="Nhập lại mật khẩu" type="password" id="#ipnPassword" value="" name="password" />
+            </td>
+          </tr>
+        <tr>
+          <td>Email của bạn</td>
+          <td>
+            <input placeholder="Email của bạn" type="text" value="" name="email" />
+          </td>
+        </tr>
+        <tr>
+            <td>Ngày sinh</td>
+            <td>
+              <input placeholder="Ngày/Tháng/Năm" type="date" value="" name="date-of-birth" />
+            </td>
+          </tr>
+        <tr>
+         
+         
+          <td>
+            <input id="k4"  style="background-image: linear-gradient(to right bottom, rgb(0, 21, 255), #f0f558);"  type="submit" value="Đăng ký" />
+          </td>
+          <td>
+            <input type="reset" value="Reset" name="reset" id="k4"  style="background-image: linear-gradient(to right bottom, rgb(0, 21, 255), #f0f558);"  />
+          </td>
+        </tr>
+
+      </table>
+    </form>
+  <video controls loop="true" muted="true" width="400px" height="300px"
+     src="./videoplayback.mp4"></video>
+     <form>
+      <img id="myImage" src="./halloween-5607875_960_720.webp" style = "width: 30%"/>
+      <P></P>
+  <input style="background-image: linear-gradient(to right bottom, rgb(0, 21, 255), #f0f558);" type="button" value="ĐI sang phải" onclick="moveLeft();" />
+  <input style="background-image: linear-gradient(to right bottom, rgb(0, 21, 255), #f0f558);" type="button" value="trở lại vị trí cũ" onclick="click_play();" />
+
+
+</form>
+  <script>
+     let imgObj = null;
+  imgObj = document.getElementById('myImage');
+  function init() {
+      imgObj = document.getElementById('myImage');
+      imgObj.style.position = 'relative';
+      imgObj.style.left = '0px';
+  }
+  function moveLeft() {
+      imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+  }
+  function click_play(){
+   init();
+}
+
+  window.onload = init;
+  
+  </script>
+  </body>
+</html>
