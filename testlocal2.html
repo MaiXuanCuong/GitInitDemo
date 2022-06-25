@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        background: url(https://msmobile.com.vn/upload_images/images/hinh-nen-dep-cho-may-tinh-full-hd-9.jpg);
+        background-size: cover;
+      }
+      h2 {
+        text-align: center;
+        color: rgb(197, 255, 51);
+      }
+      #newProduct,
+      #motasp,
+      #timkiem {
+        margin-left: 630px;
+        background-color: black;
+        color: red;
+      }
+      #addd,
+      #timkiem1 {
+        background-color: rgb(69, 232, 69);
+      }
+      bang {
+        background-color: rgb(69, 232, 69);
+      }
+      span {
+        background-color: rgb(69, 232, 69);
+      }
+      #bangg {
+        margin-left: 100px;
+        background-color: rgb(245, 89, 144);
+        /* border: solid 4px rgb(245, 23, 7); */
+      }
+      #edit,
+      #dele {
+        margin-left: 180px;
+      }
+      table {
+        margin-left: 100px;
+        background-color: rgb(69, 232, 69);
+        border: solid 1px rgb(245, 23, 7);
+      }
+      #texta {
+        background-color: rgb(228, 26, 141);
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h2><b>TRÌNH QUẢN LÝ DANH SÁCH SẢN PHẨM</b></h2>
+      <input type="text" placeholder="Nhập sản phẩm mới" id="newProduct" />
+      <input id="addd" type="button" value="Thêm" onclick="them_sp();" />
+      <input
+        style="background-color: rgb(69, 232, 69)"
+        type="reset"
+        value="Làm mới"
+      />
+      <input
+        style="background-color: rgb(69, 232, 69)"
+        type="button"
+        value="Xóa Tất cả sản phẩm"
+        onclick="xoaall();"
+      />
+      <br />
+      <br />
+      <input
+        type="textarea"
+        placeholder="Nhập mô tả sản phẩm"
+        id="motasp"
+      /><br /><br />
+      <input type="search" placeholder="Tìm kiếm sản phẩm" id="timkiem" />
+      <input
+        id="timkiem1"
+        type="button"
+        value="Tìm kiếm"
+        onclick="timkiem_sp();"
+      />
+
+      <h2><b>Danh sánh tất cả sản phẩm</b></h2>
+      <table id="bangg" style="width: 1500px">
+        <tr style="text-align: right">
+          <td style="text-align: center" width="500px"><b>Tên sản phẩm</b></td>
+          <td style="text-align: center" width="700px">
+            <b>Mô tả sản phẩm</b>
+          </td>
+          <td style="text-align: center" width="150px">
+            <b>Chỉnh sửa sản phẩm</b>
+          </td>
+          <td style="text-align: center" width="150px"><b>Xóa sản phẩm</b></td>
+        </tr>
+      </table>
+      <br />
+      <hr />
+    </form>
+    <span id="bang1"></span>
+    <script>
+      var product = [];
+      var motasp = [];
+      function timkiem_sp() {
+        if (product.includes(document.getElementById("timkiem").value)) {
+          document.getElementById("timkiem").value;
+          bang(product);
+        }
+      }
+      function chinhsuamt(index) {
+        var newmota = prompt("Nhập lại mô tả sản phẩm");
+        if (newmota) {
+          motasp[index] = newmota;
+          bang(product);
+        } else {
+          motasp[index] = "";
+        }
+      }
+
+      function edit(index) {
+        var newname = prompt("Nhập lại tên sản phẩm");
+        if (newname) {
+          product[index] = newname;
+          bang(product);
+        } else {
+          product[index] = "";
+        }
+      }
+      function them_sp() {
+        var add = document.getElementById("newProduct").value;
+        var mota = document.getElementById("motasp").value;
+        // localStorage.setItem('add', JSON.stringify(add));
+        if (add != "") {
+          if (!product.includes(add)) {
+            product.push(add);
+            motasp.push(mota);
+            bang(product);
+            document.getElementById("newProduct").value = "";
+            document.getElementById("motasp").value = "";
+          } else {
+            alert("CẢNH BÁO: Sản Phẩm: " + add + " Đã Tồn Tại");
+          }
+        } else {
+          alert(" CẢNG BÁO: Tên Sản Phẩm Không Được Để Trống ");
+        }
+   
+      }
+      function bang(product)  {
+        // var product = localStorage.getItem("product");
+        // if (!product) {product = []; }
+        // else{product =JSON.parse(product) ; }
+        // var motasp = localStorage.getItem("motasp");
+        // if (!motasp) { motasp = [];}
+        // else {product =JSON.parse(motasp) }
+
+        let a, i;
+        a = "<table border='' cellspacing='' cellpadding='' width='1500px'>";
+        for (i = 0; i < product.length; i++) {
+          a = a + "<td>";
+          a +=
+            "<td style='text-align:center'  width='500px'>" +
+            product[i] +
+            "</td>";
+          a +=
+            "<td style='text-align:center' id='texta' width='700px' height='50 px' >" +
+            motasp[i] +
+            " </td>";
+          a +=
+            "<td style='text-align:center' width='100px'> <input id='csmota' type='button' value='Chỉnh Sửa Mô tả' onclick='chinhsuamt(" +
+            i +
+            ")' ></td>";
+          a +=
+            "<td style='text-align:center' width='150px'> <input type='button' value='Chỉnh Sửa' onclick='edit(" +
+            i +
+            ")' ></td>";
+          a +=
+            "<td style='text-align:center' width='150px'> <input type='button' value='Xóa' onclick='dele(" +
+            i +
+            ")'></td>";
+          a = a + "</tr>";
+        }
+        a = a + "</table>";
+        document.getElementById("bang1").innerHTML = a;
+        localStorage.setItem('product', JSON.stringify(product));
+        localStorage.setItem('motasp', JSON.stringify(motasp));
+
+      }
+
+      function dele(index) {
+        var xacnhan = confirm("Bạn có muốn xóa sản phẩm");
+        if (xacnhan) {
+          product.splice(index, 1);
+          motasp.splice(index, 1);
+          bang(product);
+        }
+      }
+      function xoaall(index) {
+        var xacnhan1 = confirm("Bạn có muốn xóa tất cả sản phẩm");
+        if (xacnhan1) {
+          product.splice(index, product.length);
+          motasp.splice(index, motasp.length);
+          bang(product);
+        }
+      }
+
+      var motasp= localStorage.getItem('motasp');
+// /lấy dữ liệu từ trình duyệt ra  
+       if(!motasp){        
+        motasp = [];     
+           }else{  
+            motasp = JSON.parse(motasp);
+            ///chuyển dữ liệu vừa lấy ra về dạng mảng    
+             }       
+
+var product = localStorage.getItem('product');      
+        if(!product){      
+            product = [];   
+        }else{          
+        product = JSON.parse(product);
+     }  
+    //  var produce = [produc,mota4]\
+    //  console.log(mota4);
+
+     bang(product); 
+
+    //  bang(mota4);          
+// var xephang = [bang_xep_hang, diem_nguoi_choi];
+
+
+    </script>
+  </body>
+</html>
