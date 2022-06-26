@@ -102,13 +102,26 @@
       var index
       function timkiem_sp() {
         if (product.includes(document.getElementById("timkiem").value)) {
-          for (index = 2; index < product.length + 100; index++) {
-          var name1 = localStorage.getItem('product').charAt(index)
+          for (index = 0; index < product.length + 50 ; index++ && i++){
+            var i = 4;
+
+    var  name1 = 
+          
+          
+          
+           localStorage.getItem('product').charAt(index)
           var name2 = document.getElementById("timkiem").value;
           var kq =name1 == name2;
          if (kq){
-          alert("Sản phẩm: " +"'"+ name1 +"'"+ " Ở hàng số: " + (index));
-              }  }
+          if (index == 2){
+            alert("Sản phẩm: " +"'"+ name1 +"'"+ " Ở hàng số: " + 1)
+          } else if(kq){
+
+          alert("Sản phẩm: " +"'"+ name1 +"'"+ " Ở hàng số: " + parseInt(index/i+ 0.5));
+              }
+            else{
+          alert("Sản phẩm: " +"'"+ name1 +"'"+ " Ở hàng số: " + parseInt(index/i+ 0.5))
+            }  }}
           // var tentmang = name1.value;
           //       var name2 = document.getElementById("timkiem");
           //   var tendangtim = name2.value
@@ -120,8 +133,8 @@
           //            else {
           //               product[index].parentNode.style.display="none";
           //               motasp[index].parentNode.style.display="none";
-          //            }
-                     bang(product);
+      //     //            }
+      //                bang(product);
 
         } else {
           alert("Sản phẩm " + "'"+document.getElementById("timkiem").value +"'"+ " không tồn tại trong danh sách")
@@ -191,7 +204,7 @@
           a +=
             "<td style='text-align:center' width='150px'> <input type='button' value='Xóa' onclick='dele(" +
             i +
-            ")'></td>";
+            ")'>("+(i+1)+")</td>";
           a = a + "</tr>";
         }
         a = a + "</table>"
