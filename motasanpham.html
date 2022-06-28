@@ -118,7 +118,7 @@
         if (timkk) {
           for (var k = 0; k < product.length; k++) {
             if (document.getElementById("timkiem").value == product[k]) {
-              let a, i;
+              let a;
               a =
                 "<table border='' cellspacing='' cellpadding='' width='1500px'>";
               a +=
@@ -131,17 +131,17 @@
                 " </td>";
               a +=
                 "<td style='text-align:center' width='100px'> <input id='csmota' type='button' value='Chỉnh Sửa Mô tả' onclick='chinhsuamt(" +
-                i +
+                k +
                 ")' ></td>";
               a +=
                 "<td style='text-align:center' width='150px'> <input  id='cst' type='button' value='Chỉnh Sửa Tên' onclick='edit(" +
-                i +
+                k +
                 ")' ></td>";
               a +=
                 "<td style='text-align:center' width='150px'> <input  id='csmt' type='button' value='Xóa Sản Phẩm' onclick='dele(" +
-                i +
+                k +
                 ")'>(" +
-                (i + 1) +
+                (k + 1) +
                 ")</td>";
               a = a + "</tr>";
 
