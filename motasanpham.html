@@ -22,7 +22,8 @@
         color: red;
       }
       #addd,
-      #timkiem1 {
+      #timkiem1,
+      #hienthi {
         background-color: rgb(69, 232, 69);
       }
       bang {
@@ -53,8 +54,13 @@
     <form>
       <h2><b>TRÌNH QUẢN LÝ DANH SÁCH SẢN PHẨM</b></h2>
       <input type="text" placeholder="Nhập sản phẩm mới" id="newProduct" />
-      <input id="addd" type="button" value="Thêm Sản Phẩm" onclick="them_sp();" />
-      
+      <input
+        id="addd"
+        type="button"
+        value="Thêm Sản Phẩm"
+        onclick="them_sp();"
+      />
+
       <input
         style="background-color: rgb(69, 232, 69)"
         type="button"
@@ -63,11 +69,7 @@
       />
       <br />
       <br />
-      <input
-        type="textarea"
-        placeholder="Nhập mô tả sản phẩm"
-        id="motasp"
-      />
+      <input type="textarea" placeholder="Nhập mô tả sản phẩm" id="motasp" />
       <input
         style="background-color: rgb(69, 232, 69)"
         type="reset"
@@ -80,6 +82,13 @@
         value="Kiểm Tra Sản Phẩm"
         onclick="timkiem_sp();"
       />
+      <input
+        id="hienthi"
+        type="button"
+        value="Hiển Thị Tất Cả Sản Phẩm"
+        onclick="ht_sp();"
+      />
+
       <h2><b>Danh sánh tất cả sản phẩm</b></h2>
       <table id="bangg" style="width: 1500px">
         <tr style="text-align: right">
@@ -101,22 +110,43 @@
       var product = [];
       var motasp = [];
       var index;
-      // var cst = document.getElementById("cst");
-      // cst.addEventListener("mouseover", mouseover);
-      // cst.addEventListener("mouseout", mouseout);
-      // function mouseout() {
-      //   document.getElementById("cst").style.color = "red";
-      // }
-      // function mouseover() {
-      //   document.getElementById("cst").style.color = "black";
-      // }
-      
+      function ht_sp() {
+        return location.reload();
+      }
       function timkiem_sp() {
-        var timkk = product.includes(document.getElementById("timkiem").value)
+        var timkk = product.includes(document.getElementById("timkiem").value);
         if (timkk) {
-          for ( var k= 0 ; k < product.length ; k++) {
-            if  (document.getElementById("timkiem").value == product[k]) {
-              alert("Sản phẩm: " + "'" + product[k] + "'" + " Đã Có Trong Danh Sách Và Ở Hàng Số: " + (k+1))
+          for (var k = 0; k < product.length; k++) {
+            if (document.getElementById("timkiem").value == product[k]) {
+              let a, i;
+              a =
+                "<table border='' cellspacing='' cellpadding='' width='1500px'>";
+              a +=
+                "<td style='text-align:center'  width='500px'>" +
+                product[k] +
+                "</td>";
+              a +=
+                "<td style='text-align:center' id='texta' width='700px' height='50 px' >" +
+                motasp[k] +
+                " </td>";
+              a +=
+                "<td style='text-align:center' width='100px'> <input id='csmota' type='button' value='Chỉnh Sửa Mô tả' onclick='chinhsuamt(" +
+                i +
+                ")' ></td>";
+              a +=
+                "<td style='text-align:center' width='150px'> <input  id='cst' type='button' value='Chỉnh Sửa Tên' onclick='edit(" +
+                i +
+                ")' ></td>";
+              a +=
+                "<td style='text-align:center' width='150px'> <input  id='csmt' type='button' value='Xóa Sản Phẩm' onclick='dele(" +
+                i +
+                ")'>(" +
+                (i + 1) +
+                ")</td>";
+              a = a + "</tr>";
+
+              a = a + "</table>";
+              document.getElementById("bang1").innerHTML = a;
             }
           }
         } else {
@@ -128,7 +158,7 @@
               " không tồn tại trong danh sách"
           );
         }
-            }
+      }
       function chinhsuamt(index) {
         var newmota = prompt("Nhập lại mô tả sản phẩm");
         if (newmota) {
