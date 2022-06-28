@@ -53,12 +53,8 @@
     <form>
       <h2><b>TRÌNH QUẢN LÝ DANH SÁCH SẢN PHẨM</b></h2>
       <input type="text" placeholder="Nhập sản phẩm mới" id="newProduct" />
-      <input id="addd" type="button" value="Thêm" onclick="them_sp();" />
-      <input
-        style="background-color: rgb(69, 232, 69)"
-        type="reset"
-        value="Làm mới"
-      />
+      <input id="addd" type="button" value="Thêm Sản Phẩm" onclick="them_sp();" />
+      
       <input
         style="background-color: rgb(69, 232, 69)"
         type="button"
@@ -71,12 +67,17 @@
         type="textarea"
         placeholder="Nhập mô tả sản phẩm"
         id="motasp"
+      />
+      <input
+        style="background-color: rgb(69, 232, 69)"
+        type="reset"
+        value="Làm Mới Nội Dung Đang Nhập"
       /><br /><br />
       <input type="search" placeholder="Kiểm tra sản phẩm" id="timkiem" />
       <input
         id="timkiem1"
         type="button"
-        value="Kiểm tra sản phẩm"
+        value="Kiểm Tra Sản Phẩm"
         onclick="timkiem_sp();"
       />
       <h2><b>Danh sánh tất cả sản phẩm</b></h2>
@@ -111,46 +112,11 @@
       // }
       
       function timkiem_sp() {
-        if (product.includes(document.getElementById("timkiem").value)) {
-          // var kq1 =product.includes(document.getElementById("product").value)
-          // alert(kq1)
-
-          for (
-            index = 0;
-            index < product.length * product.length+3;
-            index++ && i++
-          ) {
-            var i = 4;
-            // console.log(product.length);
-
-            var name1 = localStorage.getItem("product").charAt(index);
-            var name2 = document.getElementById("timkiem").value;
-            var kq = name1 == name2;
-            if (kq) {
-              if (index == 2) {
-                alert("Sản phẩm: " + "'" + name1 + "'" + " Đã Có Trong Danh Sách Và Ở Hàng Số: " + 1);
-                break;
-              } else if (kq) {
-                alert(
-                  "Sản phẩm: " +
-                    "'" +
-                    name1 +
-                    "'" +
-                    " Đã Có Trong Danh Sách Và Ở Hàng Số: "+
-                    parseInt(index / i + 0.5)
-                );
-                break;
-              } else {
-                alert(
-                  "Sản phẩm: " +
-                    "'" +
-                    name1 +
-                    "'" +
-                    " Đã Có Trong Danh Sách Và Ở Hàng Số: " +
-                    parseInt(index / i + 0.5)
-                );
-                break;
-              }
+        var timkk = product.includes(document.getElementById("timkiem").value)
+        if (timkk) {
+          for ( var k= 0 ; k < product.length ; k++) {
+            if  (document.getElementById("timkiem").value == product[k]) {
+              alert("Sản phẩm: " + "'" + product[k] + "'" + " Đã Có Trong Danh Sách Và Ở Hàng Số: " + (k+1))
             }
           }
         } else {
@@ -162,7 +128,7 @@
               " không tồn tại trong danh sách"
           );
         }
-      }
+            }
       function chinhsuamt(index) {
         var newmota = prompt("Nhập lại mô tả sản phẩm");
         if (newmota) {
