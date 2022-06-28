@@ -83,10 +83,10 @@
       <table id="bangg" style="width: 1500px">
         <tr style="text-align: right">
           <td style="text-align: center" width="500px"><b>Tên sản phẩm</b></td>
-          <td style="text-align: center" width="700px">
+          <td style="text-align: center" width="550px">
             <b>Mô tả sản phẩm</b>
           </td>
-          <td style="text-align: center" width="150px">
+          <td style="text-align: center" width="300px">
             <b>Chỉnh sửa sản phẩm</b>
           </td>
           <td style="text-align: center" width="150px"><b>Xóa sản phẩm</b></td>
@@ -97,47 +97,70 @@
     </form>
     <span id="bang1"></span>
     <script>
-      var product = []; 
+      var product = [];
       var motasp = [];
-      var index
+      var index;
+      // var cst = document.getElementById("cst");
+      // cst.addEventListener("mouseover", mouseover);
+      // cst.addEventListener("mouseout", mouseout);
+      // function mouseout() {
+      //   document.getElementById("cst").style.color = "red";
+      // }
+      // function mouseover() {
+      //   document.getElementById("cst").style.color = "black";
+      // }
+      
       function timkiem_sp() {
         if (product.includes(document.getElementById("timkiem").value)) {
-          for (index = 0; index < product.length + 50 ; index++ && i++){
+          // var kq1 =product.includes(document.getElementById("product").value)
+          // alert(kq1)
+
+          for (
+            index = 0;
+            index < product.length * product.length+3;
+            index++ && i++
+          ) {
             var i = 4;
+            // console.log(product.length);
 
-    var  name1 = 
-          
-          
-          
-           localStorage.getItem('product').charAt(index)
-          var name2 = document.getElementById("timkiem").value;
-          var kq =name1 == name2;
-         if (kq){
-          if (index == 2){
-            alert("Sản phẩm: " +"'"+ name1 +"'"+ " Ở hàng số: " + 1)
-          } else if(kq){
-
-          alert("Sản phẩm: " +"'"+ name1 +"'"+ " Ở hàng số: " + parseInt(index/i+ 0.5));
+            var name1 = localStorage.getItem("product").charAt(index);
+            var name2 = document.getElementById("timkiem").value;
+            var kq = name1 == name2;
+            if (kq) {
+              if (index == 2) {
+                alert("Sản phẩm: " + "'" + name1 + "'" + " Đã Có Trong Danh Sách Và Ở Hàng Số: " + 1);
+                break;
+              } else if (kq) {
+                alert(
+                  "Sản phẩm: " +
+                    "'" +
+                    name1 +
+                    "'" +
+                    " Đã Có Trong Danh Sách Và Ở Hàng Số: "+
+                    parseInt(index / i + 0.5)
+                );
+                break;
+              } else {
+                alert(
+                  "Sản phẩm: " +
+                    "'" +
+                    name1 +
+                    "'" +
+                    " Đã Có Trong Danh Sách Và Ở Hàng Số: " +
+                    parseInt(index / i + 0.5)
+                );
+                break;
               }
-            else{
-          alert("Sản phẩm: " +"'"+ name1 +"'"+ " Ở hàng số: " + parseInt(index/i+ 0.5))
-            }  }}
-          // var tentmang = name1.value;
-          //       var name2 = document.getElementById("timkiem");
-          //   var tendangtim = name2.value
-          //           name1 = product[index].innerText
-          //                 if (name1 == tendangtim ){
-          //               product[index].parentNode.style.display="";
-          //               motasp[index].parentNode.style.display="";
-          //            }
-          //            else {
-          //               product[index].parentNode.style.display="none";
-          //               motasp[index].parentNode.style.display="none";
-      //     //            }
-      //                bang(product);
-
+            }
+          }
         } else {
-          alert("Sản phẩm " + "'"+document.getElementById("timkiem").value +"'"+ " không tồn tại trong danh sách")
+          alert(
+            "Sản phẩm " +
+              "'" +
+              document.getElementById("timkiem").value +
+              "'" +
+              " không tồn tại trong danh sách"
+          );
         }
       }
       function chinhsuamt(index) {
@@ -152,17 +175,23 @@
       function edit(index) {
         var newname = prompt("Nhập lại tên sản phẩm");
         if (newname) {
-          if( !product.includes(newname)){
-          product[index] = newname;
-          bang(product);
+          if (!product.includes(newname)) {
+            product[index] = newname;
+            bang(product);
+          } else {
+            product[index] = "";
+            alert(
+              "CẢNH BÁO: Sản Phẩm: " +
+                "'" +
+                newname +
+                "'" +
+                " Đã Tồn Tại Vui Lòng Đặt Tên Khác"
+            );
+          }
         } else {
           product[index] = "";
-          alert("CẢNH BÁO: Sản Phẩm: " + "'"+newname +"'"+ " Đã Tồn Tại Vui Lòng Đặt Tên Khác");
-            }
-          } else {
-          product[index] = "";
-          }
-    }
+        }
+      }
       function them_sp() {
         var add = document.getElementById("newProduct").value;
         var mota = document.getElementById("motasp").value;
@@ -174,7 +203,13 @@
             document.getElementById("newProduct").value = "";
             document.getElementById("motasp").value = "";
           } else {
-            alert("CẢNH BÁO: Sản Phẩm: " + "'"+add +"'"+ " Đã Tồn Tại Vui Lòng Đặt Tên Khác");
+            alert(
+              "CẢNH BÁO: Sản Phẩm: " +
+                "'" +
+                add +
+                "'" +
+                " Đã Tồn Tại Vui Lòng Đặt Tên Khác"
+            );
           }
         } else {
           alert(" CẢNG BÁO: Tên Sản Phẩm Không Được Để Trống ");
@@ -198,16 +233,18 @@
             i +
             ")' ></td>";
           a +=
-            "<td style='text-align:center' width='150px'> <input type='button' value='Chỉnh Sửa' onclick='edit(" +
+            "<td style='text-align:center' width='150px'> <input  id='cst' type='button' value='Chỉnh Sửa Tên' onclick='edit(" +
             i +
             ")' ></td>";
           a +=
-            "<td style='text-align:center' width='150px'> <input type='button' value='Xóa' onclick='dele(" +
+            "<td style='text-align:center' width='150px'> <input  id='csmt' type='button' value='Xóa Sản Phẩm' onclick='dele(" +
             i +
-            ")'>("+(i+1)+")</td>";
+            ")'>(" +
+            (i + 1) +
+            ")</td>";
           a = a + "</tr>";
         }
-        a = a + "</table>"
+        a = a + "</table>";
         document.getElementById("bang1").innerHTML = a;
         localStorage.setItem("product", JSON.stringify(product));
         localStorage.setItem("motasp", JSON.stringify(motasp));
