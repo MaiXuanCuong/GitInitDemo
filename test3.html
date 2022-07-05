@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
+  <body> -->
     <!-- <script>
       var thu = Number(prompt("Nhập thứ"));
       if (thu <= 8 && thu >= 2) {
@@ -145,7 +145,7 @@
         console.log(i);
       }
     </script> -->
-
+    <!-- 
     <h1 id="a">Thế Giới Di Động</h1>
     <h4>Liên hệ: 0853246717</h4>
     <div class="container">
@@ -272,6 +272,578 @@
                 }
                 document.getElementById("tinhtong").innerText = tt;
             }
-        </script>
+        </script> -->
+
+    <!-- <script>
+      for (var i = 2; i < 10; i++) {
+        for (var j = 1; j <= 10; j++) {
+          console.log(i + " x " + j + " = " + i * j);
+        }
+        console.log("=========");
+      }
+    </script> -->
+
+    <!-- <script>
+      var number = 20;
+      var N = 2;
+      var count = 0;
+      while (count <= number) {
+        var flag = true;
+
+        if (N < 2) {
+          flag = false;
+        } else {
+          for (var i = 2; i < N - 1; i++) {
+            if (N % i == 0) {
+              flag = false;
+              break;
+            }
+          }
+        }
+        if (flag == true) {
+          console.log(N);
+          count++;
+        }
+        N++;
+      }
+    </script> -->
+
+    <!-- <script>
+      var N = 0;
+    var count = 0;
+    var number = 20;
+    while (count <= number) {
+      if (N % 2 == 0) {
+        document.write(N + " Là số chắn <br>")
+        count++
+      }
+      N++ 
+    }
+    </script> -->
+    <!-- <script>
+      for (var i = 1; i <= 5; i++) {
+        var count = 6 - i;
+        var c = i - 1;
+        for (var k = 1; k <= c; k++) {
+          document.write("");
+        }
+        for (var j = 1; j <= count; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+    </script>
+    <br /><br />
+
+    <script>
+      for (var i = 1; i <= 7; i++) {
+        var count = 21;
+        for (var j = 1; j <= count; j++) {
+          if (i == 1 || i == 7) {
+            document.write("*");
+          }
+          if (i > 1 && i < 7) {
+            if (j == 1 || j == 21) {
+              document.write("*");
+            } else {
+              for (var k = 1; k <= 1; k++) {
+                document.write("..");
+              }
+            }
+          }
+        }
+        document.write("<br>");
+      }
+    </script>
+    <br /><br />
+
+    <script>
+      for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= i; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+    </script>
+    <br /><br />
+
+    <script>
+      for (var i = 1; i <= 5; i++) {
+        var count = 5 - i;
+        for (var k = 1; k <= count; k++) {
+          document.write("..");
+        }
+        for (var j = 1; j <= i; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+    </script>
+    <br /><br />
+
+    <script>
+      for (var i = 1; i <= 5; i++) {
+        var count = 6 - i;
+        for (var k = 1; k <= i; k++) {
+          document.write("..");
+        }
+        for (var j = 1; j <= count; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+    </script><br><br> -->
+
+    <!-- <script>
+      var count = parseInt(prompt(" nhập count"));
+      var count2 = parseInt(prompt("nhập count2"));
+      for (var i = 1; i <= count2; i++) {
+        var count1 = count;
+        for (var j = 1; j <= count; j++) {
+          var c = 1;
+          var v = parseInt(count1 / 2 + 2) - i;
+          var b = parseInt(count1 / 2 + 1) + i;
+          // var v = 12 - i;
+          // var b = 11 + i;
+          var n = count;
+          if ((j >= c && j < v) || (j >= b && j <= n)) {
+            document.write("..");
+          } else {
+            for (var k = 1; k <= 1; k++) {
+              document.write("*");
+            }
+          }
+        }
+        document.write("<br>");
+      }
+    </script> -->
+    <!-- <br /><br />
+    <script>
+      var count11 = parseInt(prompt("Nhập chiều dài 'chiều ngang'"));
+
+      var count22 = parseInt(prompt("Nhập chiều rộng 'chiều dọc'"));
+
+      for (var i = 1; i <= count22; i++) {
+        for (var j = 1; j <= count11; j++) {
+          if (i == 1 || i == count22) {
+            document.write("*");
+          }
+          if (i > 1 && i < count22) {
+            if (j == 1 || j == count11) {
+              document.write("*");
+            } else {
+              for (var k = 1; k <= 1; k++) {
+                document.write("..");
+              }
+            }
+          }
+        }
+        document.write("<br>");
+      }
+    </script> -->
+
+    <!-- <script>
+      var mang = ["Toan", "ly" , "hoa"];
+      var mang1 = new Array("Toan", "ly", "hoa");
+      for (var i = 0; i < mang1.length; i++) {
+        document.write(mang1[i])
+        document.write('<br>')
+      }
+    </script> -->
+
+    <!-- <script>
+      var number = [];
+      var total = 0
+      for (var i = 0; i < 11; i++) {
+        if (i % 2 == 0) {
+          number.push(i);
+        }
+      }
+      for (var j = 0; j < number.length; j++) {
+        total += number[j]
+      }
+      document.write(total)
+      document.write(number);
+      console.log(number);
+    </script> -->
+
+    <!-- <script>
+      var mangboi = [];
+      for (var i = 1; i <= 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+          mangboi.push(" FizzBuzz");
+        } else if (i % 3 == 0) {
+          mangboi.push(" Fizz");
+        } else if (i % 5 == 0) {
+          mangboi.push( " Buzz");
+        } else {
+          mangboi.push(i);
+        }
+      }
+      document.write(mangboi);
+    </script> -->
+
+    <!-- <script> -->
+    <!-- //          01234567
+      // 12345678911111111
+      // ----***---***----     1
+      // ---*****-*****---     2
+      // ---***********---     3
+      // -----*******-----     4
+      // -------***-------     5
+      // --------*--------     6
+      // (parseInt(daii/2)) -->
+    <!-- var daii = 6;
+      var daij = 17;
+      for (var i = 1; i < daii; i++) {
+        if (i > 0 && i <= 3) {
+          for (var j = 1; j < 17; j++) {
+            if (i == 1) {
+              if ((j >= 5 && j <= 7) || (j >= 11 && j <= 13)) {
+                document.write("*");
+              } else {
+                document.write("..");
+              }
+            } else if (i == 2) {
+              if ((j >= 4 && j <= 8) || (j >= 10 && j <= 14)) {
+                document.write("*");
+              } else {
+                document.write("..");
+              }
+            } else if (i == 3) {
+              if (j >= 4 && j <= 14) {
+                document.write("*");
+              } else {
+                document.write("..");
+              }
+            }
+          }
+        }
+        if (i > 3 && i <= 6) {
+          if (j >= 5 && j <= 12) {
+            document.write("*");
+            alert(1);
+          } else {
+            document.write("..");
+          }
+        }
+        document.write("<br>");
+      } -->
+
+    <!-- //   var count = parseInt(prompt(" nhập count"));
+      //   var count2 = parseInt(prompt("nhập count2"));
+      //   for (var i = 1; i <= count2; i++) {
+      //     var count1 = count;
+      //     for (var j = 1; j <= count; j++) {
+      //       var c = 1;
+      //       var v = parseInt(count1 / 2 + 2) - i;
+      //       var b = parseInt(count1 / 2 + 1) + i;
+      //       // var v = 12 - i;
+      //       // var b = 11 + i;
+      //       var n = count;
+      //       if ((j >= c && j < v) || (j >= b && j <= n)) {
+      //         document.write("..");
+      //       } else {
+      //         for (var k = 1; k <= 1; k++) {
+      //           document.write("*");
+      //         }
+      //       }
+      //     }
+      //     document.write("<br>");
+      //   }
+      //
+    </script> -->
+
+    <!-- <script>
+      var mangboi = [];
+      for (var i = 1; i <= 100; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+          mangboi.push(" FizzBuzz");
+        } else if (i % 3 == 0) {
+          mangboi.push(" Fizz");
+        } else if (i % 5 == 0) {
+          mangboi.push( " Buzz");
+        } else {
+          mangboi.push(i);
+        }
+      }
+      document.write(mangboi.join('<br>'));
+    </script> -->
+
+    <!-- <script>
+      var tusach = [
+        ["toán", "lý", "hóa"],
+        ["văn", "sử", "địa"],
+      ];
+      // tusach[0].push("tiếng anh")
+      // tusach[0][3]= "tiếng anh";
+      // document.write(tusach)
+      for (var i = 0; i < tusach.length; i++) {
+        for (var j = 0; j < tusach[i].length; j++) {
+          document.write(tusach[i][j]+'<br>');
+        }
+      }
+    </script> -->
+    <!-- <script>
+      var mang = [];
+      for (var i = 0; i < 3; i++) {
+        mang.push([]);
+        for (var j = 0; j < 4; j++) {
+          mang[i].push(j);
+          // document.write(mang[i][j]+'<br>');
+        }
+      }
+      document.write(mang +'<br>')
+
+    </script> -->
+
+    <!-- <script>
+      
+      var tienganh = ["hello","bye","love"];
+      var tiengviet = ["xin chào","tạm biệt","tình yêu"]
+      var tim = prompt("Nhập từ cần tra");
+      var index = tienganh.indexOf(tim)
+
+      if (index == -1){
+        alert("từ bạn tra hiện không tồn tại trong hệ")
+      } else {
+      alert(tiengviet[index])
+    
+      }
+    
+    </script> -->
+
+    <!-- <script>
+      var number = [1,31,435,75,12,1,2,43,4,5,6,13]
+      var max = number[0];
+      var bien = 0;
+      for (var i = 1; i < number.length; i++) {
+        if (number[i]> max){
+          max = number[i];
+          bien = i
+        }
+      }
+      alert(max)
+      alert(bien)
+    </script> -->
+
+    <!-- Tính bình phương <input type="text" placeholder="Nhập số cần tính " id="nhapso" oninput="tinhtoan()" /> kết quả <span id="ketqua"></span>
+
+    <script>
+      function tinh(number) {
+        var result = number * number;
+        return result;
+      }
+function tinhtoan(){
+  var input = document.getElementById("nhapso").value;
+  var  result = tinh(input);
+  document.getElementById("ketqua").innerHTML= result;
+}
+    </script> -->
+
+    <!-- Nhập số a<input
+      type="text"
+      oninput="tinhtoan1()"
+      placeholder="Nhập số a"
+      id="nhapa"
+    /><br /><br />
+    Nhập số b<input
+      type="text"
+      oninput="tinhtoan1()"
+      placeholder="Nhập số b"
+      id="nhapb"
+    /><br /><br />
+    Nhập Phép Tính<input
+      type="text"
+      oninput="tinhtoan1()"
+      placeholder="+ - * / or cong tru nhan chia"
+      id="nhappheptinh"
+    /><br /><br />
+    Kết quả: <span id="ketqua1"></span>
+
+    <script>
+      function cong(a, b) {
+        return a + b;
+      }
+      function tru(a, b) {
+        return a - b;
+      }
+      function nhan(a, b) {
+        return a * b;
+      }
+      function chia(a, b) {
+        return a / b;
+      }
+
+      function maytinh(a, b, pheptinh) {
+        var ketqua;
+        switch (pheptinh) {
+          case "cong":
+          case "+":
+            ketqua = cong(a, b);
+            break;
+          case "tru":
+          case "-":
+            ketqua = tru(a, b);
+            break;
+          case "nhan":
+          case "*":
+            ketqua = nhan(a, b);
+            break;
+          case "chia":
+          case "/":
+            ketqua = chia(a, b);
+            break;
+        }
+        return ketqua;
+      }
+      function tinhtoan1() {
+        maytinh(a, b, pheptinh);
+        var a = parseFloat(document.getElementById("nhapa").value);
+        var b = parseFloat(document.getElementById("nhapb").value);
+        var pheptinh = document.getElementById("nhappheptinh").value;
+        var kq = maytinh(a, b, pheptinh);
+
+        document.getElementById("ketqua1").innerHTML = kq;
+      }
+    </script> -->
+    <!-- <script>
+const one = [10, 2, 3];
+const two = [4, 5, 6];
+ 
+var max = Math.max(...one,... two)
+alert(max)
+    </script> -->
+    <!-- Min <input type="number" id="min" name="min" /><br /><br />
+    Max <input type="number" id="max" name="max" /><br /><br />
+    <input
+      type="button"
+      id="random"
+      name="random"
+      onclick="ran_dom()"
+      value="Random"
+    /><br /><br />
+    Kết quả: 
+    <img id="reload" src="https://www.random.org/util/cp/images/ajax-loader.gif" />
+    <span id="ketquarandom"></span> 
+
+    <script>
+     
+      function ran_dom() {
+        setTimeout(function() {
+
+        var min = parseInt(document.getElementById("min").value);
+        var max = parseInt(document.getElementById("max").value);
+        var ketquarandom = getRndInteger(min, max);
+        document.getElementById("ketquarandom").innerHTML = ketquarandom;
+        },1000)
+      }
+   
+      
+      function getRndInteger(min, max) {
+        return  Math.floor(Math.random() * (max - min + 1)) + min
+        
+      }
+    </script> -->
+
+    <!-- <script>
+      var numbers = [3,2,56,4,26,67]
+      function xoaphantutheochiso(index,array) {
+
+      }
+      xoaphantutheochiso(3,numbers)
+    </script>
   </body>
-</html>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+</head>
+<body>
+<form action="javascript:void(0);" method="POST" onsubmit="listPhone.add()">
+    <input type="text" id="add" placeholder="Thêm sản phẩm">
+    <input type="submit" value="Thêm" >
+</form>
+
+<br><br>
+
+<table border="1px" cellpadding="0" cellspacing="0" width="600" style="text-align: center; ">
+    <tr>
+        <th style="padding: 10px 0;">Tổng các sản phẩm</th>
+        <th colspan="2" style="padding: 10px 0;"><p id="soluong"></p></th>
+    </tr>
+    <tbody id="product"></tbody>
+</table>
+
+<br><br>
+
+<form action="javascript:void(0);" method="POST" id="saveEdit" >
+    <input type="text" id="edit">
+    <input type="submit" value="Edit" />
+</form>
+
+
+
+<script>
+    let Phone = function(){
+        this.listPhone = ["Nokia","Iphone","Samsung","LG"]
+        this.product = document.getElementById("product")
+
+        this.count = function (data) {
+            let soluong = document.getElementById("soluong")
+            if (data != null){
+                if (data>0){
+                    soluong.innerHTML = "Có "+data+" sản phẩm"
+                } else{
+                    soluong.innerHTML = "Ko có sản phẩm"
+                }
+            }
+        }
+        
+        this.display = function () {
+            let data = ""
+            if(this.listPhone.length>0){
+                for (let i=0; i<this.listPhone.length; i++){
+                    data+= "<tr>"
+                    data+= "<td style='padding: 10px 0; font-size: 20px;font-weight: bold ;text-transform:uppercase;color: red'>"+this.listPhone[i]+"</td>"
+                    data+= "<td style='padding: 10px 0;'><button onclick='listPhone.edit("+i+")'>Edit</button></td>"
+                    data+= "<td style='padding: 10px 0;'><button onclick='listPhone.delete("+i+")'>Delete</button></td>"
+                    data+= "</tr>"
+                }
+            }
+            this.count(this.listPhone.length)
+            return this.product.innerHTML = data
+        }
+
+        this.add = function () {
+            let addProduct = document.getElementById("add").value
+            this.listPhone.push(addProduct.trim())
+            this.display()
+            document.getElementById("add").value = ""
+        }
+
+        this.edit = function (id) {
+            let editProduct = document.getElementById("edit")
+            editProduct.value = this.listPhone[id]
+            self = this;
+            document.getElementById("saveEdit").onsubmit = function () {
+                let produc = editProduct.value
+                self.listPhone.splice(id, 1, produc)
+                self.display()
+                editProduct.value = ""
+            }
+        }
+
+        this.delete = function (id) {
+            this.listPhone.splice(id, 1);
+            this.display()
+        }
+    }
+
+    let listPhone = new Phone()
+    listPhone.display()
+</script>
+</body>
+</html> 

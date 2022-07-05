@@ -1,0 +1,156 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+               01234567
+      12345678911111111
+      ----***---***----     1
+      ---*****-*****---     2
+      ---***********---     3
+      -----*******-----     4
+      -------***-------     5
+      --------*--------     6
+      (parseInt(daii/2))
+      var daii = 7;
+      var daij = 18;
+      var dai1 = 6;
+      var dai2 = 12;
+      for (var i = 1; i < daii; i++) {
+        if (i > 0 && i <= parseInt(daii / 2)) {
+          for (var j = 1; j < 18; j++) {
+            if (i == 1) {
+              if (
+                (j >= dai1 - 1 && j <= dai1 + 1) ||
+                (j >= dai2 - 1 && j <= dai2 + 1)
+              ) {
+                document.write("*");
+              } else {
+                document.write("..");
+              }
+            } else if (i == 2) {
+              if (
+                (j >= dai1 - 2 && j <= dai1 + 2) ||
+                (j >= dai2 - 2 && j <= dai2 + 2)
+              ) {
+                document.write("*");
+              } else {
+                document.write("..");
+              }
+            } else if (i == 3) {
+              if (j >= dai1 - 2 && j <= dai2 + 2) {
+                document.write("*");
+              } else {
+                document.write("..");
+              }
+            }
+          }
+        } else if (i > parseInt(daii / 2) && i < daii) {
+          var dai3 = 0;
+          var dai4 = 1;
+
+          if (i - parseInt(daii / 2) == dai3+1) {
+            dai3++;
+
+          } else if (daii - i == dai4+1) {
+            dai4--;
+            dai4--;
+            dai4--;
+
+          }
+          for (var j = 1; j < daij; j++) {
+            if (j >= dai1 - dai3 && j <= dai2 + dai4) {
+              document.write("*");
+            } else {
+              document.write("..");
+            }
+          }
+        }
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>all demo</title>
+    <!-- <script src="https://freetuts.net/cnd/js/jquery/jquery-3.2.1.min.js"></script> -->
+  </head>
+  <body>
+    <!-- <h1>Học lập trình miễn phí tại freetuts.net</h1>
+          
+        <div id="container">
+            <div>
+                <div>This is a test</div>
+                <div>This is a test 2</div>
+                <div>This is a test 3</div>
+            </div>
+            <input type="text" name="test" disabled="disabled">
+            <input type="button" name="button" value="Button" disabled="disabled">
+            <h2>This is H2 content</h2>
+        </div>
+        <button onclick="myFunction()">Click vào đây để xem kết quả</button>
+        <script>
+            function myFunction(){
+                $( "input:disabled" ).css( "backgroundColor", "red");
+            }
+        </script> -->
+
+    <!-- <script>
+                let mang = ['a','b','c','c','d','d','d','e','d','f']
+        let kytu = prompt("Nhập vào 1 ký tự bất kỳ")
+        document.write("Mảng gồm ["+mang+"]<br>")
+        let kiemtra = kiemTraTrongMang(kytu, mang)
+        if (kiemtra >0){
+            document.write("Có "+kiemtra+" ký tự "+kytu+" trong mảng")
+        }else{
+            document.write("Không có dữ liệu trong mảng")
+        }
+    
+    function kiemTraTrongMang(kytu, mang) {
+        let dem=0
+        for (let i=0; i<mang.length; i++){
+            if (kytu == mang[i]) {
+                dem++
+            }
+        }
+        if(dem>0){
+            return dem
+        }
+        return -1}
+        </script> -->
+
+    <script>
+      var Thang = {
+        name: "Thang",
+        age: 20,
+        learn: function () {
+          return "learn"
+          // console.log("learn");
+        },
+        work: function () {
+          console.log("work");
+        },
+      };
+      // truy cập thuộc tính
+       // console.log(Thang)
+        // console.log(Thang.name);
+        // console.log(Thang.age);
+      // truy cập phương thức
+        // console.log( Thang.learn());
+        // Thang.work();
+      // thay đổi thuộc tính
+          // Thang.name = "Cuong";
+          // Thang.age = 20;
+          // console.log(Thang)
+
+    </script>
+  </body>
+</html>

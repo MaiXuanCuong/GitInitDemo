@@ -230,7 +230,16 @@ window.onload = init;
 
         // if the snake eats the foodS
         if (snakeX == food.x && snakeY == food.y) {
+        var dem1
+          var xcore = 7;
+            dem1++;
+
           score++;
+
+          if (dem1 == xcore){
+            xcore = xcore + 7;
+            score = score+ 8;
+          }
           eat.play();
           food = {
             x: Math.floor(Math.random() * 17 + 1) * box,
@@ -281,7 +290,7 @@ window.onload = init;
         ctx.fillText("Điểm: " + score, 2 * box, 1.6 * box);
       }
 
-      var game = setInterval(draw, 90);
+      var game = setInterval(draw, 150);
     </script>
   </body>
 </html>

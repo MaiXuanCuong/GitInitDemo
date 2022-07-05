@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        
+    </style>
+  </head>
+  <body>
+    <!-- <script>
+      var a = parseFloat(prompt("Nhập a"));
+      var b =  parseFloat(prompt("Nhập b"));
+      var Maytinh = {
+        so_thu_nhat: 0,
+        so_thu_hai: 0,
+        cong: function () {
+          return this.so_thu_nhat + this.so_thu_hai;
+        },
+        tru: function () {
+          return this.so_thu_nhat - this.so_thu_hai;
+        },
+        nhan: function () {
+          return this.so_thu_nhat * this.so_thu_hai;
+        },
+        chia: function () {
+          return this.so_thu_nhat / this.so_thu_hai;
+        },
+      };
+      // gán giá trị cho thuộc tính
+      Maytinh.so_thu_nhat = a;
+      Maytinh.so_thu_hai = b;
+      console.log(Maytinh.cong());
+      console.log(Maytinh.tru());
+      console.log(Maytinh.nhan());
+      console.log(Maytinh.chia());
+    </script> -->
+
+    <!-- <script>
+        // var ten_lop = function (){
+        //     thuộc tính
+        //     this.thuoctinh1 = value;
+        //     this.thuoctinh2 = value;
+        //      phươgn thức
+        //     this.phuongthuc1 = function () {}
+        //     this.phuongthuc2 = function () {}
+        // }
+        // khởi tạo đối tượng
+        // var cuong = new ten_lop();
+        // var thang = new ten_lop();
+        // var phi = new ten_lop();
+        // var tam = new ten_lop();
+
+        var person = function(){
+            // thuộc tính
+            this.name = "";
+            this.age = 0;
+            // phương thức
+            this.learn = function(){
+                return this.name + " đang học bài";
+            };
+            this.work = function(){
+
+            };
+            this.info = function(){
+                console.log(this.name)
+                console.log(this.learn())
+            };
+        }
+        // khoi tao doi tuong
+        let Thang = new person();
+        // console.log(Thang);
+     // gán giá trị thuộc tính
+        Thang.name = "Thắng";
+        Thang.age = 20;
+
+        // truy cập thuộc tính
+        Thang.name
+        Thang.age
+
+        // truy cập phương thức
+
+        Thang.learn();
+        Thang.work();
+        Thang.info();
+        // in ra đối tượng
+        console.log(Thang)
+
+    </script> -->
+
+    <!-- <script>
+        var Circle = function(){
+            this.radius = 0;
+            this.color = '';
+            this.Circle = function (){
+
+            }
+            this.getRadius = function(){
+                return this.radius;
+            }
+            this.getArea = function(){
+                return this.radius * this.radius * Math.PI
+            }
+            this.perimeter = function (){
+                return this.radius * 2 * Math.PI
+            }
+        }
+     var Circle1 = new Circle();
+        Circle1.radius = 10;
+        Circle1.color = 'black';
+ console.log(Circle1.getArea())
+ console.log(Circle1.perimeter())
+        
+    </script> -->
+
+    <!-- <script>
+      var Date = function (day, month, year) {
+        //thuộc tính
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        // phương thức
+        this.getDay = function () {
+          return this.day;
+        };
+        this.getMonth = function () {
+          return this.month;
+        };
+        this.getYear = function () {
+          return this.year;
+        };
+        this.setDay = function (day) {
+          this.day = day;
+        };
+        this.setMonth = function (month) {
+          this.month = month;
+        };
+        this.setYear = function (year) {
+          this.year = year;
+        };
+        this.setDate = function (day, month, year) {
+          this.day = day;
+          this.month = month;
+          this.year = year;
+        };
+      };
+      var date = new Date();
+      date.setDate(29, 06, 2002);
+      var Day = date.getDay();
+      var Month = date.getMonth();
+      var Year = date.getYear();
+      alert(Day + "/" + Month + "/" + Year);
+    </script> -->
+    <!-- <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+        function Circle(x, y, radius){
+   this.x = x;
+   this.y = y;
+   this.radius = radius;
+}
+
+function getRandomHex(){
+    return Math.floor(Math.random()*255);
+}
+
+function getRandomColor(){
+   var red = getRandomHex();
+   var green = getRandomHex();
+   var blue = getRandomHex();
+	 return "rgb(" + red + "," + blue + "," + green +")";
+}
+
+function createCircle(){
+    var ctx = document.getElementById("myCanvas").getContext("2d");
+    var radius = Math.floor(Math.random() * 80);
+    var color = getRandomColor();
+    var x = Math.random() * window.innerWidth;
+    var y = Math.random() * window.innerHeight;
+    var circle= new Circle(x, y, radius);
+    ctx.beginPath();
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = color;
+    ctx.fill();
+}
+
+function createMultipleCircle(){
+		for(var i = 0; i < 30; i++){
+    	createCircle();
+    }
+}
+
+createMultipleCircle();
+
+
+    </script> -->
+    <!-- <canvas id="DemoCanvas" width="400" height="300"></canvas>
+    <script>
+      var HCN = function () {
+        // thuộc tính
+        this.chieudai = 0;
+        this.chieurong = 0;
+        // phương thức
+        this.dientich = function () {
+          return this.chieudai * this.chieurong;
+        };
+        this.chuvi = function () {
+          return (this.chieudai + this.chieurong) * 2;
+        };
+        this.render = function () {
+          var canvas = document.getElementById("DemoCanvas");
+          if (canvas.getContext) {
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "#fa4b2a"; 
+            ctx.fillRect(10, 40, this.chieudai, this.chieurong);
+          }
+        };
+      };
+      // khởi tạo đối tượng
+      var hcn = new HCN();
+      // gán giá trị thuộc tính
+   
+     var Chieurong = parseFloat(prompt("Nhập chiều rộng"));
+      hcn.chieurong = Chieurong;
+    var Chieudai = parseFloat(prompt("Nhập chiều dài"));
+      hcn.chieudai = Chieudai;
+      // in ra kết quả
+
+      document.write("Diện tích Hình Chữ Nhật Là: " + hcn.dientich() + "<br>");
+      document.write("Chu vi Hình Chữ Nhật Là : " + hcn.chuvi());
+        hcn.render()
+    
+    </script> -->
+
+    <!-- <script>
+      var chuyendoi = function () {
+        this.doC = 0;
+        this.doCsangF = function () {
+          return this.doC * (9 / 5) + 32;
+        };
+        this.doCsangK = function () {
+          return this.doC + 273.15;
+        };
+      };
+      var cd = new chuyendoi();
+      cd.doC = parseFloat(prompt("Nhập Độ C"));
+      var DoC = cd.doC;
+      var DoF = cd.doCsangF();
+      var DoK = cd.doCsangK();
+
+      document.write(DoC + "°C" + " = " + DoF + " °F" + "<br>");
+      document.write(DoC + "°C" + " = " + DoK + " °K");
+    </script> -->
+    <table>
+        <tr>
+            <td colspan="2">
+                <p id="pin"></p>
+                <td>
+                    <button type="button" id="dt6" onclick="SacPin()">Sạc Pin</button
+                        ><br /><br />
+                </td>
+    <p id="bat"></p>
+            </td>
+        </tr>
+        <tr>
+            <td><button type="button" id="dt1" onclick="BatDienThoai()">
+                Bật Điện Thoại</button
+              ><br /><br /></td>
+            <td> <button type="button" id="dt2" onclick="TatDienThoai()">
+                Tắt Điện Thoại</button
+              ><br /><br /></td>
+            <td>
+                <button type="button" id="dt5" onclick="GuiTinNhan()">Gửi Tin Nhắn</button
+                    ><br /><br />
+               </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="dt3" onclick="XemTinNhan()">Xem Tin Nhắn</button
+                    ><br /><br />
+            </td>
+            <td>
+                <button type="button" id="dt4" onclick="XemTinNhanDaGui()">
+                    Xem Tin Đã Gửi</button
+                  ><br /><br />
+            </td>
+            <td>
+                <button type="button" id="dt8" onclick="SoanTinNhan()">Soạn Tin Nhắn</button
+                    ><br /><br />
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td colspan="2">
+                <p id="pin1"></p>
+                <p id="bat1"></p>
+            </td>
+            <td>
+                <button type="button" id="dt6" onclick="SacPin1()">Sạc Pin</button
+                    ><br /><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="dt1" onclick="BatDienThoai1()">
+                    Bật Điện Thoại</button
+                  ><br /><br />
+            </td>
+            <td>
+                <button type="button" id="dt2" onclick="TatDienThoai1()">
+                    Tắt Điện Thoại</button
+                  ><br /><br />
+            </td>
+            <td>
+                <button type="button" id="dt8" onclick="SoanTinNhan1()">
+                    Soạn Tin Nhắn</button
+                  ><br /><br />
+            </td>
+          
+        </tr>
+        <tr>
+            <td>
+                <button type="button" id="dt3" onclick="XemTinNhan1()">Xem Tin Nhắn</button
+                    ><br /><br />
+            </td>
+            <td>
+                <button type="button" id="dt4" onclick="XemTinNhanDaGui1()">
+                    Xem Tin Đã Gửi</button
+                  ><br /><br />
+            </td>
+            <td>
+                <button type="button" id="dt5" onclick="GuiTinNhan1()">Gửi Tin Nhắn</button
+                    ><br /><br />
+            </td>
+        </tr>
+</table>
+    <script>
+      var DienThoai = function () {
+        // thuộc tính
+        this.pin = 100;
+        this.tinnhandangsoan = "";
+        this.tindagui = [];
+        this.hopthuden = [];
+        this.trangthai = false;
+        this.noidung = "";
+        // phương thức
+        this.batdienthoai = function () {
+         return this.trangthai = true;
+        };
+        this.tatdienthoai = function () {
+          this.trangthai = false;
+          document.getElementById("bat").innerHTML =
+            "Trạng thái điện thoại Realme đang tắt";
+            document.getElementById("bat1").innerHTML =
+            "Trạng thái điện thoại Iphone đang tắt";
+        };
+
+        this.Trangthai = function () {
+          if (this.pin > 0) {
+            if (this.trangthai == true) {
+              document.getElementById("bat").innerHTML =
+                "Trạng thái điện thoại Realme đang bật";
+              document.getElementById("bat1").innerHTML =
+              "Trạng thái điện thoại Iphone đang bật";
+              this.soantinnhan = function (tinnhan) {
+                this.noidung = tinnhan;
+                this.pin--;
+                return this.pin;
+              };
+              this.guitinhnhan = function (Dt) {
+                if (this.noidung != ""){
+                this.tindagui.push(this.noidung);
+                Dt.hopthuden.push(this.noidung);
+                this.noidung= ""
+                this.pin--;
+                alert("Đang gửi")
+                return this.pin;}
+              };
+              this.xemtinnhan = function () {
+                alert(this.hopthuden);
+                this.pin--;
+                return this.pin;
+              };
+              this.xemtindagui = function () {
+                alert(this.tindagui);
+                this.pin--;
+                return this.pin;
+              };
+            }
+          } else {
+            this.trangthai = false;
+            document.getElementById("bat").innerHTML =
+              "Trạng thái điện thoại Realme đang tắt";
+              document.getElementById("bat1").innerHTML =
+              "Trạng thái điện thoại Iphone đang tắt";
+            return (this.pin = 0);
+            return this.trangthai;
+          }
+        };
+        this.nhantinnhan = function (tinnhanden) {
+          this.hopthuden.push(tinnhanden);
+        };
+        this.sacpin = function () {
+          for (var i = this.pin; i <= 100; i++) {
+            if (this.pin == 100) {
+              alert("Pin đầy vui lòng rút sạc");
+              break;
+            }
+            this.pin++;
+          }
+        };
+      };
+      var Realme = new DienThoai();
+      var Iphone = new DienThoai();
+      Realme.pin = 5;
+      function BatDienThoai() {
+        Realme.batdienthoai();
+      }
+      function TatDienThoai() {
+        Realme.tatdienthoai();
+      }
+      function XemTinNhan() {
+        Realme.xemtinnhan();
+      }
+      function XemTinNhanDaGui() {
+        Realme.xemtindagui();
+      }
+
+      function SoanTinNhan() {
+        if (Realme.trangthai == true) {
+          var guitn = prompt("Nhập Tin Nhắn");
+          Realme.soantinnhan(guitn);
+        }
+      }
+
+      function GuiTinNhan() {
+        Realme.guitinhnhan(Iphone);
+      }
+      function SacPin() {
+        Realme.sacpin();
+      }
+      //   function XemPin() {
+//         var kiemtra = Realme.trangthai
+// if (kiemtra) {
+      setInterval(function () {
+        Realme.Trangthai();
+        document.getElementById("pin").innerHTML =
+          "Trạng thái pin " + Realme.pin + "%";
+        }, 1000)
+    // };
+
+      //   }
+      Iphone.pin = 9;
+      function BatDienThoai1() {
+        Iphone.batdienthoai();
+      }
+      function TatDienThoai1() {
+        Iphone.tatdienthoai();
+      }
+      function XemTinNhan1() {
+        Iphone.xemtinnhan();
+      }
+      function XemTinNhanDaGui1() {
+        Iphone.xemtindagui();
+      }
+
+      function SoanTinNhan1() {
+        if (Iphone.trangthai == true) {
+          var guitn1 = prompt("Nhập Tin Nhắn");
+          Iphone.soantinnhan(guitn1);
+        }
+      }
+
+      function GuiTinNhan1() {
+        Iphone.guitinhnhan(Realme);
+      }
+      function SacPin1() {
+        Iphone.sacpin();
+      }
+    //   if (Iphone.trangthai) {
+        setInterval(function () {
+          Iphone.Trangthai();
+          document.getElementById("pin1").innerHTML =
+            "Trạng thái pin " + Iphone.pin + "%";
+        }, 1000);
+    //   }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script type="text/javascript">
+        function createHeart(sourceId, resultId) {
+            objSource = window.document.getElementById(sourceId);
+            objResult = window.document.getElementById(resultId);
+    
+            if (objSource.value.length == 0) {
+                alert("Vui lòng nhập nội dung cần tạo trái tim!");
+                return false;
+            }
+    
+            string = objSource.value;
+    
+            heart = "";
+            heart += "_________" + partString(string, 8) + "____________" + partString(string, 9) + "\n";
+            heart += "______" + partString(string, 12) + "_______" + partString(string, 15) + "\n";
+            heart += "____" + partString(string, 17) + "___" + partString(string, 18) + "\n";
+            heart += "___" + partString(string, 41) + "\n";
+            heart += "__" + partString(string, 44) + "\n";
+            heart += "_" + partString(string, 46) + "\n";
+            heart += "_" + partString(string, 46) + "\n";
+            heart += partString(string, 47) + "\n";
+            heart += partString(string, 47) + "\n";
+            heart += partString(string, 46) + "\n";
+            heart += partString(string, 45) + "\n";
+            heart += "_" + partString(string, 43) + "\n";
+            heart += "__" + partString(string, 41) + "\n";
+            heart += "____" + partString(string, 38) + "\n";
+            heart += "______" + partString(string, 34) + "\n";
+            heart += "_________" + partString(string, 28) + "\n";
+            heart += "____________" + partString(string, 22) + "\n";
+            heart += "______________" + partString(string, 18) + "\n";
+            heart += "_________________" + partString(string, 13) + "\n";
+            heart += "___________________" + partString(string, 9) + "\n";
+            heart += "_____________________" + partString(string, 6) + "\n";
+            heart += "______________________" + partString(string, 4) + "\n";
+            heart += "_______________________" + partString(string, 2) + "\n";
+    
+            objResult.value = heart;
+        }
+    
+        function partString(string, num) {
+            if (string.length >= num)
+                return string.substring(0, num);
+    
+            repeat = Math.ceil(num / string.length);
+    
+            newString = "";
+    
+            for (i = 0; i < repeat; i++)
+                newString += string;
+    
+            return newString.substring(0, num);
+        }
+    </script>
+    <p align="center">
+        <br>
+        <input id="text" name="text" size="37" placeholder='Nhập nội dung cần làm thành hình trái tim'>
+    </p>
+    <p align="center">
+        <button name="Create Heart" accesskey="g" onclick="return createHeart('text', 'result');" value="Tạo trái tim" type="button">Tạo trái tim</button>
+    </p>
+    <p align="center">Copy hình vừa tạo thôi</p>
+    <textarea cols="45" rows="23" readonly="readonly" wrap="OFF" id="result" onclick="this.focus(); this.select();"></textarea>
+    <style>
+        input {
+            display: block;
+            width: 100%;
+            padding: 14px 20px;
+            outline: 0;
+            border: 0;
+            border-radius: .25rem;
+            font-size: 14px;
+            background-color: #1861ab;
+            height: 3em;
+        }
+        
+        button:active {
+            border: 0
+        }
+        
+        .page-wrapper {
+            height: 80vh
+        }
+    </style> -->
+      
+    <style>
+          body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover {
+      background-color: rgb(218, 81, 81);
+      color: black;
+    }
+    
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+    
+    .topnav-right {
+      float: right;
+    }
+        html {
+          background-color: #b7f5f5;
+          background-size: cover;
+        }
+        div {
+          text-align: center;
+        }
+        h2 {
+          text-align: center;
+          color: rgb(9, 9, 9);
+        }
+        #newProduct,
+        #motasp,
+        #timkiem {
+          background-color: black;
+          color: red;
+          border-radius: 20px/20px;
+        }
+        #addd,
+        #timkiem1,
+        #hienthi,
+        #reset1,
+        #delete1 {
+          background-color: rgb(246, 161, 201);
+          border-radius: 20px/20px;
+        }
+        #prd {
+          background-color: #00ffff;
+          border-radius: 10px/10px;
+        }
+        #csmota,
+        #cst,
+        #csmt {
+          background-color: rgb(247, 110, 245);
+          border-radius: 8px/8px;
+        }
+        bang {
+          background-color: rgb(69, 232, 69);
+        }
+        span {
+          background-color: rgb(69, 232, 69);
+        }
+        #bangg {
+          text-align: center;
+          background-color: rgb(255, 99, 9);
+          border-radius: 10px/10px;
+        }
+        #edit,
+        #dele {
+          text-align: center;
+  
+          border-radius: 20px/20px;
+        }
+        table,
+        #td1 {
+          text-align: center;
+  
+          background-color: rgb(203, 246, 62);
+          border: solid 0px rgb(245, 23, 7);
+          border-radius: 10px/10px;
+        }
+        #texta {
+          background-color: #00ffff;
+          border-radius: 10px/10px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="topnav">
+        <a class="active" onclick="ht_sp()">Trang Chủ</a>
+        <a onclick="add01()">Thêm Sản Phẩm</a>
+        <a  onclick="chinhsua01()">Quản Lý Sản phẩm</a>
+        <div class="topnav-right">
+          <a  onclick="timsp0()" >Tìm Kiếm</a>
+          <a href="./dangnhap.html" >Đăng Nhập</a>
+        </div>
+      </div>
+      
+      <div style="padding-left:16px">
+      </div>
+      <form>
+        <h2><b>TRÌNH QUẢN LÝ DANH SÁCH SẢN PHẨM</b></h2>
+      
+        <div>
+          <input type="text" placeholder="Nhập sản phẩm mới" id="newProduct" />
+          <input
+            id="addd"
+            type="button"
+            value="Thêm Sản Phẩm"
+            onclick="them_sp();"
+          />
+<!--   
+<form action="javascript:void(0);" method="POST" id="saveEdit" >
+  <input type="text" id="edit2">
+  <input type="submit" value="Edit" />
+</form> -->
+  
+          <input
+            id="delete1"
+            type="button"
+            value="Xóa Tất cả sản phẩm"
+            onclick="xoaall();"
+          />
+          <br />
+          <br />
+          <input type="textarea" placeholder="Nhập mô tả sản phẩm" id="motasp" />
+          <input
+            id="reset1"
+            type="reset"
+            value="Làm Mới Nội Dung Đang Nhập"
+          /><br /><br />
+          <input type="search" placeholder="Kiểm tra sản phẩm" id="timkiem" />
+          <input
+            id="timkiem1"
+            type="button"
+            value="Kiểm Tra Sản Phẩm"
+            onclick="timkiem_sp();"
+          />
+          <!-- <input
+            id="hienthi"
+            type="button"
+            value="Hiển Thị Tất Cả Sản Phẩm"
+            onclick="ht_sp();"
+          /> -->
+  
+          <h2><b>Danh sánh tất cả sản phẩm</b></h2>
+        </div>
+  
+        <table id="bangg" style="width: 1500px">
+          <tr style="text-align: right">
+            <td style="text-align: center" width="500px"><b>Tên sản phẩm</b></td>
+            <td style="text-align: center" width="550px">
+              <b>Mô tả sản phẩm</b>
+            </td>
+            <td style="text-align: center" width="300px">
+              <b>Chỉnh sửa sản phẩm</b>
+            </td>
+            <td style="text-align: center" width="150px"><b>Xóa sản phẩm</b></td>
+          </tr>
+        </table>
+  
+        <br />
+        <hr />
+      </form>
+      <span id="bang1"></span>
+      <script>
+        var product = [];
+        var motasp = [];
+        var index;
+        function ht_sp() {
+          return location.reload();
+        }
+        function timkiem_sp() {
+          var timkk = product.includes(document.getElementById("timkiem").value);
+          if (timkk) {
+            for (var k = 0; k < product.length; k++) {
+              if (document.getElementById("timkiem").value == product[k]) {
+                let a;
+                a =
+                  "<table border='' cellspacing='' cellpadding='' width='1500px'>";
+                a +=
+                  "<td style='text-align:center' id='prd' width='500px'>" +
+                  product[k] +
+                  "</td>";
+                a +=
+                  "<td style='text-align:center' id='texta' width='700px' height='50 px' >" +
+                  motasp[k] +
+                  " </td>";
+                a +=
+                  "<td style='text-align:center' id='td1' width='100px'> <input id='csmota' type='button' value='Chỉnh Sửa Mô tả' onclick='chinhsuamt(" +
+                  k +
+                  ")' ></td>";
+                a +=
+                  "<td style='text-align:center' id='td1' width='150px'> <input  id='cst' type='button' value='Chỉnh Sửa Tên' onclick='edit(" +
+                  k +
+                  ")' ></td>";
+                a +=
+                  "<td style='text-align:center' id='td1' width='150px'> <input  id='csmt' type='button' value='Xóa Sản Phẩm' onclick='dele(" +
+                  k +
+                  ")'>(" +
+                  (k + 1) +
+                  ")</td>";
+                a = a + "</tr>";
+  
+                a = a + "</table>";
+                document.getElementById("bang1").innerHTML = a;
+              }
+            }
+          } else {
+            alert(
+              "Sản phẩm " +
+                "'" +
+                document.getElementById("timkiem").value +
+                "'" +
+                " không tồn tại trong danh sách"
+            );
+          }
+        }
+      var add0 =  document.getElementById("addd")
+      add0.disabled = true
+      function add01(){
+        add0.disabled = false
+      }
+      var chinhsua0 =  document.getElementById("delete1")
+      chinhsua0.disabled = true
+      function chinhsua01(){
+        chinhsua0.disabled = false
+      }  
+      
+      var timkiem0 =  document.getElementById("timkiem1")
+      timkiem0.disabled = true
+      function timsp0(){
+        timkiem0.disabled = false
+      }
+        function chinhsuamt(index) {
+          var newmota = prompt("Nhập lại mô tả sản phẩm");
+          if (newmota) {
+            motasp[index] = newmota;
+            bang(product);
+          } else {
+            motasp[index] = "";
+          }
+        }
+      //  function edit (index) {
+      //       let editProduct = document.getElementById("edit2");
+      //       editProduct.value = this.product[index]
+           
+      //       }
+     
+
+            //   document.getElementById("prd").onsubmit = function () {
+            //     let produc =  editProduct.value
+            //     product.splice(index, 1, produc)
+            //     product.display()
+            //     editProduct.value = ""
+            //     bang(product);
+            // }
+        // }
+            // document.getElementById("saveEdit").onsubmit = function () {
+            //     let produc = editProduct.value
+            //     product.splice(index, 1, produc)
+            //     product.display()
+            //     editProduct.value = ""
+            // }
+          
+        // function chinhsuamt(index) {
+        //     let editmt = document.getElementById("motasp");
+        //     editmt.value = this.motasp[index]
+        //     self = this;
+        //     document.getElementById("csmota").onsubmit = function () {
+        //         let scmtt = editmt.value
+        //         self.listPhone.splice(index, 1, scmtt)
+        //         self.display()
+        //         editmt.value = ""
+        //     }
+        // }
+        function edit(index) {
+          var newname = prompt("Nhập lại tên sản phẩm");
+          if (newname) {
+            if (!product.includes(newname)) {
+              product[index] = newname;
+              bang(product);
+            } else {
+              product[index] = "";
+              alert(
+                "CẢNH BÁO: Sản Phẩm: " +
+                  "'" +
+                  newname +
+                  "'" +
+                  " Đã Tồn Tại Vui Lòng Đặt Tên Khác"
+              );
+            }
+          } else {
+            product[index] = "";
+          }
+        }
+        function them_sp() {
+          var add = document.getElementById("newProduct").value;
+          var mota = document.getElementById("motasp").value;
+          if (add != "") {
+            if (!product.includes(add)) {
+              product.push(add);
+              motasp.push(mota);
+              bang(product);
+              document.getElementById("newProduct").value = "";
+              document.getElementById("motasp").value = "";
+            } else {
+              alert(
+                "CẢNH BÁO: Sản Phẩm: " +
+                  "'" +
+                  add +
+                  "'" +
+                  " Đã Tồn Tại Vui Lòng Đặt Tên Khác"
+              );
+            }
+          } else {
+            alert(" CẢNG BÁO: Tên Sản Phẩm Không Được Để Trống ");
+          }
+        }
+        function bang(product) {
+          let a, i;
+          a = "<table border='' cellspacing='' cellpadding='' width='1500px'>";
+          for (i = 0; i < product.length; i++) {
+            // a = a + "<td>";
+            a +=
+              "<td style='text-align:center' id='prd'  width='500px'>" +
+              product[i] +
+              "</td>";
+            a +=
+              "<td style='text-align:center' id='texta' width='700px' height='50 px' >" +
+              motasp[i] +
+              " </td>";
+            a +=
+              "<td style='text-align:center' id='td1' width='100px'> <input id='csmota' type='button' value='Chỉnh Sửa Mô tả' onclick='chinhsuamt(" +
+              i +
+              ")' ></td>";
+            a +=
+              "<td style='text-align:center' id='td1' width='150px'> <input  id='cst' type='button' value='Chỉnh Sửa Tên' onclick='edit(" +
+              i +
+              ")' ></td>";
+            a +=
+              "<td style='text-align:center' id='td1' width='150px'> <input  id='csmt' type='button' value='Xóa Sản Phẩm' onclick='dele(" +
+              i +
+              ")'>(" +
+              (i + 1) +
+              ")</td>";
+            a = a + "</tr>";
+          }
+          a = a + "</table>";
+          document.getElementById("bang1").innerHTML = a;
+          localStorage.setItem("product", JSON.stringify(product));
+          localStorage.setItem("motasp", JSON.stringify(motasp));
+        }
+        function dele(index) {
+          var xacnhan = confirm("Bạn có muốn xóa sản phẩm");
+          if (xacnhan) {
+            product.splice(index, 1);
+            motasp.splice(index, 1);
+            bang(product);
+          }
+        }
+        
+        function xoaall(index) {
+          var xacnhan1 = confirm("Bạn có muốn xóa tất cả sản phẩm");
+          if (xacnhan1) {
+            product.splice(index, product.length);
+            motasp.splice(index, motasp.length);
+            bang(product);
+          }
+        }
+        
+        var motasp = localStorage.getItem("motasp");
+        if (!motasp) {
+          motasp = [];
+        } else {
+          motasp = JSON.parse(motasp);
+        }
+        var product = localStorage.getItem("product");
+        if (!product) {
+          product = [];
+        } else {
+          product = JSON.parse(product);
+        }
+        bang(product);
+      </script>
+</body>
+</html>

@@ -7,24 +7,40 @@
     <title>Document</title>
     <style>
       html {
-        background: url(https://msmobile.com.vn/upload_images/images/hinh-nen-dep-cho-may-tinh-full-hd-9.jpg);
+        background: url(https://anhdep123.com/wp-content/uploads/2020/05/h%C3%ACnh-n%E1%BB%81n-m%C3%A1y-t%C3%ADnh-%C4%91%E1%BA%B9p-2018.jpg);
         background-size: cover;
+      }
+      div {
+        text-align: center;
       }
       h2 {
         text-align: center;
-        color: rgb(197, 255, 51);
+        color: rgb(9, 9, 9);
       }
       #newProduct,
       #motasp,
       #timkiem {
-        margin-left: 630px;
         background-color: black;
         color: red;
+        border-radius: 20px/20px;
       }
       #addd,
       #timkiem1,
-      #hienthi {
-        background-color: rgb(69, 232, 69);
+      #hienthi,
+      #reset1,
+      #delete1 {
+        background-color: rgb(246, 161, 201);
+        border-radius: 20px/20px;
+      }
+      #prd {
+        background-color: #00ffff;
+        border-radius: 10px/10px;
+      }
+      #csmota,
+      #cst,
+      #csmt {
+        background-color: rgb(247, 110, 245);
+        border-radius: 8px/8px;
       }
       bang {
         background-color: rgb(69, 232, 69);
@@ -33,63 +49,78 @@
         background-color: rgb(69, 232, 69);
       }
       #bangg {
-        margin-left: 100px;
-        background-color: rgb(245, 89, 144);
+        text-align: center;
+
+        /* margin-left: 100px; */
+        background-color: rgb(255, 99, 9);
+        border-radius: 10px/10px;
       }
       #edit,
       #dele {
-        margin-left: 180px;
+        /* margin-left: 180px; */
+        text-align: center;
+
+        border-radius: 20px/20px;
       }
-      table {
-        margin-left: 100px;
-        background-color: rgb(69, 232, 69);
-        border: solid 1px rgb(245, 23, 7);
+      table,
+      #td1 {
+        /* margin-left: 100px; */
+        text-align: center;
+
+        background-color: rgb(203, 246, 62);
+        border: solid 0px rgb(245, 23, 7);
+        border-radius: 10px/10px;
       }
       #texta {
-        background-color: rgb(228, 26, 141);
+        background-color: #00ffff;
+        border-radius: 10px/10px;
       }
     </style>
   </head>
   <body>
     <form>
       <h2><b>TRÌNH QUẢN LÝ DANH SÁCH SẢN PHẨM</b></h2>
-      <input type="text" placeholder="Nhập sản phẩm mới" id="newProduct" />
-      <input
-        id="addd"
-        type="button"
-        value="Thêm Sản Phẩm"
-        onclick="them_sp();"
-      />
 
-      <input
-        style="background-color: rgb(69, 232, 69)"
-        type="button"
-        value="Xóa Tất cả sản phẩm"
-        onclick="xoaall();"
-      />
-      <br />
-      <br />
-      <input type="textarea" placeholder="Nhập mô tả sản phẩm" id="motasp" />
-      <input
-        style="background-color: rgb(69, 232, 69)"
-        type="reset"
-        value="Làm Mới Nội Dung Đang Nhập"
-      /><br /><br />
-      <input type="search" placeholder="Kiểm tra sản phẩm" id="timkiem" />
-      <input
-        id="timkiem1"
-        type="button"
-        value="Kiểm Tra Sản Phẩm"
-        onclick="timkiem_sp();"
-      />
-      <input
-        id="hienthi"
-        type="button"
-        value="Hiển Thị Tất Cả Sản Phẩm"
-        onclick="ht_sp();"
-      />
+      <div>
+        <input type="text" placeholder="Nhập sản phẩm mới" id="newProduct" />
+        <input
+          id="addd"
+          type="button"
+          value="Thêm Sản Phẩm"
+          onclick="them_sp();"
+        />
 
-      <h2><b>Danh sánh tất cả sản phẩm</b></h2>
+        <input
+          id="delete1"
+          type="button"
+          value="Xóa Tất cả sản phẩm"
+          onclick="xoaall();"
+        />
+        <br />
+        <br />
+        <input type="textarea" placeholder="Nhập mô tả sản phẩm" id="motasp" />
+        <input
+          id="reset1"
+          type="reset"
+          value="Làm Mới Nội Dung Đang Nhập"
+        /><br /><br />
+        <input type="search" placeholder="Kiểm tra sản phẩm" id="timkiem" />
+        <input
+          id="timkiem1"
+          type="button"
+          value="Kiểm Tra Sản Phẩm"
+          onclick="timkiem_sp();"
+        />
+        <input
+          id="hienthi"
+          type="button"
+          value="Hiển Thị Tất Cả Sản Phẩm"
+          onclick="ht_sp();"
+        />
+
+        <h2><b>Danh sánh tất cả sản phẩm</b></h2>
+      </div>
+
       <table id="bangg" style="width: 1500px">
         <tr style="text-align: right">
           <td style="text-align: center" width="500px"><b>Tên sản phẩm</b></td>
@@ -102,6 +133,7 @@
           <td style="text-align: center" width="150px"><b>Xóa sản phẩm</b></td>
         </tr>
       </table>
+
       <br />
       <hr />
     </form>
@@ -122,7 +154,7 @@
               a =
                 "<table border='' cellspacing='' cellpadding='' width='1500px'>";
               a +=
-                "<td style='text-align:center'  width='500px'>" +
+                "<td style='text-align:center' id='prd' width='500px'>" +
                 product[k] +
                 "</td>";
               a +=
@@ -130,15 +162,15 @@
                 motasp[k] +
                 " </td>";
               a +=
-                "<td style='text-align:center' width='100px'> <input id='csmota' type='button' value='Chỉnh Sửa Mô tả' onclick='chinhsuamt(" +
+                "<td style='text-align:center' id='td1' width='100px'> <input id='csmota' type='button' value='Chỉnh Sửa Mô tả' onclick='chinhsuamt(" +
                 k +
                 ")' ></td>";
               a +=
-                "<td style='text-align:center' width='150px'> <input  id='cst' type='button' value='Chỉnh Sửa Tên' onclick='edit(" +
+                "<td style='text-align:center' id='td1' width='150px'> <input  id='cst' type='button' value='Chỉnh Sửa Tên' onclick='edit(" +
                 k +
                 ")' ></td>";
               a +=
-                "<td style='text-align:center' width='150px'> <input  id='csmt' type='button' value='Xóa Sản Phẩm' onclick='dele(" +
+                "<td style='text-align:center' id='td1' width='150px'> <input  id='csmt' type='button' value='Xóa Sản Phẩm' onclick='dele(" +
                 k +
                 ")'>(" +
                 (k + 1) +
@@ -217,7 +249,7 @@
         for (i = 0; i < product.length; i++) {
           // a = a + "<td>";
           a +=
-            "<td style='text-align:center'  width='500px'>" +
+            "<td style='text-align:center' id='prd'  width='500px'>" +
             product[i] +
             "</td>";
           a +=
@@ -225,15 +257,15 @@
             motasp[i] +
             " </td>";
           a +=
-            "<td style='text-align:center' width='100px'> <input id='csmota' type='button' value='Chỉnh Sửa Mô tả' onclick='chinhsuamt(" +
+            "<td style='text-align:center' id='td1' width='100px'> <input id='csmota' type='button' value='Chỉnh Sửa Mô tả' onclick='chinhsuamt(" +
             i +
             ")' ></td>";
           a +=
-            "<td style='text-align:center' width='150px'> <input  id='cst' type='button' value='Chỉnh Sửa Tên' onclick='edit(" +
+            "<td style='text-align:center' id='td1' width='150px'> <input  id='cst' type='button' value='Chỉnh Sửa Tên' onclick='edit(" +
             i +
             ")' ></td>";
           a +=
-            "<td style='text-align:center' width='150px'> <input  id='csmt' type='button' value='Xóa Sản Phẩm' onclick='dele(" +
+            "<td style='text-align:center' id='td1' width='150px'> <input  id='csmt' type='button' value='Xóa Sản Phẩm' onclick='dele(" +
             i +
             ")'>(" +
             (i + 1) +
