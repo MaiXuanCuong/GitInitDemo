@@ -5,88 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #dt10 {
+            background-color: aqua;
+            margin-left: auto;
+            border: solid 10px rgb(245, 23, 7);
+           
+        }
+        #dt11 {
+            background-color: rgb(200, 248, 8);
+            margin-right: auto;
+            border: solid 10px rgb(245, 23, 7);
+        }
+        #dt1{
+            background-color: rgb(255, 0, 238)
+        }
+        #dt2 {
+            background-color: rgb(255, 0, 238)
+
+        }
+    </style>
 </head>
 <body>
-    <table>
+   <table id="dt10">
         <tr>
             <td colspan="2">
                 <p id="pin"></p>
+                <p id="bat"></p>
                 <td>
-                    <button type="button" id="dt6" onclick="SacPin()">Sạc Pin</button
+                    <button type="button" id="dt1" onclick="SacPin()">🔋</button
                         ><br /><br />
                 </td>
-    <p id="bat"></p>
+    
             </td>
         </tr>
         <tr>
             <td><button type="button" id="dt1" onclick="BatDienThoai()">
-                Bật Điện Thoại</button
+                🔓</button
               ><br /><br /></td>
-            <td> <button type="button" id="dt2" onclick="TatDienThoai()">
-                Tắt Điện Thoại</button
+            <td> <button type="button" id="dt1" onclick="TatDienThoai()">
+                🔒</button
               ><br /><br /></td>
             <td>
-                <button type="button" id="dt5" onclick="GuiTinNhan()">Gửi Tin Nhắn</button
+                <button type="button" id="dt1" onclick="GuiTinNhan()">➤ </button
                     ><br /><br />
                </td>
         </tr>
         <tr>
             <td>
-                <button type="button" id="dt3" onclick="XemTinNhan()">Xem Tin Nhắn</button
+                <button type="button" id="dt1" onclick="XemTinNhan()">📩 </button
                     ><br /><br />
             </td>
             <td>
-                <button type="button" id="dt4" onclick="XemTinNhanDaGui()">
-                    Xem Tin Đã Gửi</button
+                <button type="button" id="dt1" onclick="XemTinNhanDaGui()">
+                    ✉</button
                   ><br /><br />
             </td>
             <td>
-                <button type="button" id="dt8" onclick="SoanTinNhan()">Soạn Tin Nhắn</button
+                <button type="button" id="dt1" onclick="SoanTinNhan()">📝</button
                     ><br /><br />
             </td>
         </tr>
     </table>
-    <table>
+    <table id="dt11">
         <tr>
             <td colspan="2">
                 <p id="pin1"></p>
                 <p id="bat1"></p>
             </td>
             <td>
-                <button type="button" id="dt6" onclick="SacPin1()">Sạc Pin</button
+                <button type="button" id="dt2" onclick="SacPin1()"> 🔋</button
                     ><br /><br />
             </td>
         </tr>
         <tr>
             <td>
-                <button type="button" id="dt1" onclick="BatDienThoai1()">
-                    Bật Điện Thoại</button
+                <button type="button" id="dt2" onclick="BatDienThoai1()">
+                    🔓</button
                   ><br /><br />
             </td>
             <td>
                 <button type="button" id="dt2" onclick="TatDienThoai1()">
-                    Tắt Điện Thoại</button
+                    🔒</button
                   ><br /><br />
             </td>
             <td>
-                <button type="button" id="dt8" onclick="SoanTinNhan1()">
-                    Soạn Tin Nhắn</button
+                <button type="button" id="dt2" onclick="SoanTinNhan1()">
+                    📝</button
                   ><br /><br />
             </td>
           
         </tr>
         <tr>
             <td>
-                <button type="button" id="dt3" onclick="XemTinNhan1()">Xem Tin Nhắn</button
+                <button type="button" id="dt2" onclick="XemTinNhan1()">📩 </button
                     ><br /><br />
             </td>
             <td>
-                <button type="button" id="dt4" onclick="XemTinNhanDaGui1()">
-                    Xem Tin Đã Gửi</button
+                <button type="button" id="dt2" onclick="XemTinNhanDaGui1()">
+                    ✉</button
                   ><br /><br />
             </td>
             <td>
-                <button type="button" id="dt5" onclick="GuiTinNhan1()">Gửi Tin Nhắn</button
+                <button type="button" id="dt2" onclick="GuiTinNhan1()">➤ </button
                     ><br /><br />
             </td>
         </tr>
@@ -107,18 +128,18 @@
         this.tatdienthoai = function () {
           this.trangthai = false;
           document.getElementById("bat").innerHTML =
-            "Trạng thái điện thoại Realme đang tắt";
+            "Realme đang tắt";
             document.getElementById("bat1").innerHTML =
-            "Trạng thái điện thoại Iphone đang tắt";
+            "Iphone đang tắt";
         };
 
         this.Trangthai = function () {
           if (this.pin > 0) {
             if (this.trangthai == true) {
               document.getElementById("bat").innerHTML =
-                "Trạng thái điện thoại Realme đang bật";
+                "Realme đang bật";
               document.getElementById("bat1").innerHTML =
-              "Trạng thái điện thoại Iphone đang bật";
+              "Iphone đang bật";
               this.soantinnhan = function (tinnhan) {
                 this.noidung = tinnhan;
                 this.pin--;
@@ -131,6 +152,7 @@
                 this.noidung= ""
                 this.pin--;
                 alert("Đang gửi")
+                alert("Đã gửi")
                 return this.pin;}
               };
               this.xemtinnhan = function () {
@@ -147,9 +169,9 @@
           } else {
             this.trangthai = false;
             document.getElementById("bat").innerHTML =
-              "Trạng thái điện thoại Realme đang tắt";
+              "Realme đang tắt";
               document.getElementById("bat1").innerHTML =
-              "Trạng thái điện thoại Iphone đang tắt";
+              "Iphone đang tắt";
             
             return (this.pin = 0);
             return this.trangthai;
@@ -203,7 +225,7 @@
       setInterval(function () {
         Realme.Trangthai();
         document.getElementById("pin").innerHTML =
-          "Trạng thái pin " + Realme.pin + "%";
+          "Pin " + Realme.pin + "%";
         }, 1000)
     // };
 
@@ -239,7 +261,7 @@
         setInterval(function () {
           Iphone.Trangthai();
           document.getElementById("pin1").innerHTML =
-            "Trạng thái pin " + Iphone.pin + "%";
+            "Pin " + Iphone.pin + "%";
         }, 1000);
     //   }
     </script>

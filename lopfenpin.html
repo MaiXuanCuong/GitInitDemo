@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var Pin = function  (){
+        //     this.nangluong = 0;
+        //     this.trangthai = false;
+        //     this.pin = 50;
+        //     this.Battery = function (pin){
+        //         this.pin = pin
+        //     }
+        //     this.setnagluong = function (nl){
+        //         this.nangluong = nl
+        //     }
+        //     this.getnagluong = function (){
+        //         return this.nangluong
+        //     }
+        //     this.giamnangluong = function (){
+        //         this.pin--
+        //     }
+        //     this.denpin = function (){ 
+                
+        //     }
+        //     this.bat = function(){
+
+        //     }
+        //     this.tat = function (){
+
+        //     }
+        // }
+//         var Battery = function () {
+
+// this.setEnergy = function (energy) {
+//   this.energy = energy;
+// };
+
+// this.getEnergy = function () {
+//   return this.energy;
+// };
+
+// this.decreaseEnergy = function () {
+//   if (this.energy > 0) {
+//     this.energy--;
+//   }
+// }
+// };
+
+// var FlashLamp = function () {
+
+// this.setBattery = function (battery) {
+//   this.battery = battery;
+// };
+
+// this.getBatteryInfo = function () {
+//   return this.battery.getEnergy();
+// };
+
+// this.light = function () {
+//   if(this.status){
+//     alert("Lighting");
+//   } else {
+//     alert("Not lighting");
+//   }
+// };
+
+// this.turnOn = function () {
+//   this.status = true;
+// };
+
+// this.turnOff = function () {
+//   this.status = false;
+// }
+// };
+
+// var battery = new Battery();
+// battery.setEnergy(100);
+
+// var flashLamp = new FlashLamp();
+// flashLamp.setBattery(battery);
+
+// document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+// flashLamp.light();
+
+// document.write("Turn on<br/>")
+// flashLamp.turnOn();
+// flashLamp.light();
+// document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+
+// document.write("Turn off<br/>")
+// flashLamp.turnOff();
+// flashLamp.light();
+//     </script>
+    <script>
+      class Apple {
+        constructor(weight){
+        this.weight = weight
+        }
+        decrease(){
+            if (this.isEmpty()){
+                alert("Táo đã được ăn hết roài")
+            } else{
+                this.weight --;
+            }
+            
+        }
+        isEmpty(){
+            if (this.weight <= 0){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        getWeight(){
+            return this.weight
+
+        }
+      }
+      class Human {
+        constructor(name, gender, weight){
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+
+      }
+            isMale(){
+                if(this.gender == 1){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            getGender(boolean){
+                if(this.isMale()){
+                    return "MALE"
+                } else {
+                    return "FeMALE"
+                }
+            }
+            checkApple(apple){
+                return apple.isEmpty();
+            }
+            eat(apple){
+                if (apple.getWeight()>0){
+                    apple.decrease();
+                    this.weight++
+                } else {
+                    alert("Táo đã hết")
+                }
+            }
+            say(string){
+                console.log(string);
+            }
+            getName(){
+               return this.name
+            }
+            setName(name){
+                this.name =name
+            }
+            getWeight (){
+                return this.weight
+            }
+            setWeight(weight){
+                this.weight = weight
+            }
+        getInfor(human){
+          
+            alert(human.nam + " " + human.weight + " " + human.getGender() )
+        }}
+        let adam = new Human("adam", 1, 65);
+let eva = new Human("eva", 2, 55);
+let apple_1 = new Apple(10);
+
+
+// adam.checkApple(apple_1)
+adam.say("I am Adam" + "<br>");
+eva.say("I am Eva" + "<br>");
+
+
+while (apple_1.isEmpty() !== true) {
+    document.write("Adam ăn táo" + "<br>");
+    adam.eat(apple_1);
+
+    document.write("Quả táo còn: " + "<br>");
+    document.write(apple_1.getWeight() + " đơn vị" + "<br>");
+    document.write( "Cân nặng của Adm là: " + adam.getWeight() + " đơn vị" + "<br>");
+
+    document.write("<br>")
+    
+    document.write("Eva ăn táo" + "<br>");
+    eva.eat(apple_1);
+
+    document.write("Quả táo còn: " + "<br>");
+    document.write(apple_1.getWeight() + " đơn vị" + "<br>");
+    document.write( "Cân nặng là: " + eva.getWeight() + " đơn vị" + "<br>");
+}
+    </script>
+</body>
+</html>
